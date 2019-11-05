@@ -1,0 +1,72 @@
+{
+  "manifestVersion": 1,
+  "id": "work-items-status-change-task",
+  "version": "1.0.0",
+  "name": "Change State Of Linked Work Items",
+  "publisher": "true-sergeev",
+  "description": "Automatically change state of work items associated with build or release",
+  "categories": [
+    "Build and release"
+  ],
+  "links":{
+    "repository": {
+      "uri" :"https://github.com/asergeev95/ChangeStateLinkedWorkItems"
+    },
+    "issues": {
+      "uri": "https://github.com/asergeev95/ChangeStateLinkedWorkItems/issues"
+    }
+  },
+  "icons": {
+    "default": "images/logo.png"
+  },
+  "public":true,
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "tags": [
+    "Release",
+    "Build",
+    "Work item tagging"
+  ],
+  "content": {
+    "details": {
+      "path": "extension.md"
+    }
+  },
+  "branding": {
+    "color": "#f97923",
+    "theme": "dark"
+  },
+  "files": [
+    {
+      "path": "ChangeStateLinkedWorkItems/dist",
+      "packagePath": "ChangeStateLinkedWorkItems/dist"
+    },
+    {
+      "path": "ChangeStateLinkedWorkItems/node_modules",
+      "packagePath": "ChangeStateLinkedWorkItems/node_modules"
+    },
+    {
+      "path": "ChangeStateLinkedWorkItems/icon.png",
+      "packagePath": "ChangeStateLinkedWorkItems/icon.png"
+    },
+    {
+      "path": "ChangeStateLinkedWorkItems/task.json",
+      "packagePath": "ChangeStateLinkedWorkItems/task.json"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "work-items-status-change-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "ChangeStateLinkedWorkItems"
+      }
+    }
+  ]
+}
