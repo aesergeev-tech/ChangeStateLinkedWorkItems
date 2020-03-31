@@ -31,6 +31,14 @@
             "defaultValue": "",
             "required": true,
             "helpMarkDown": "Specify desired work item state"
+        },
+        {
+            "name": "fromState",
+            "type": "string",
+            "label": "Only update work items in this state",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Only update work items in this state"
         }
         
     ],
