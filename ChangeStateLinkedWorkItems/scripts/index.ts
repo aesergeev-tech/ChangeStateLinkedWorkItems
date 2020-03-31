@@ -13,8 +13,11 @@ async function run() {
       pipelineType === "Build"
         ? await getWorkItemsFromBuild()
         : await getWorkItemsFromRelease();
+    const fromState = tl.getInput("fromState");
     workItemsData.forEach(async (workItem: any) => {
-      await changeStateOfWorkItem(workItem);
+      if (!fromState || (fromState && workItem.state === fromState)) {
+        await changeStateOfWorkItem(workItem);
+      }
     });
   } catch (err) {
     tl.logIssue(tl.IssueType.Error, err.message);
